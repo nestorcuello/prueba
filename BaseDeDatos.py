@@ -11,15 +11,15 @@ class Main(wx.App):
     def OnInit(self):
         
         #crear los objetos de la clase MyFrame
-        frame = wx.MiniFrame(None, -1, 'SISTEMA ALUMNOS.py', size=(900, 425),style= wx.MINIMIZE_BOX|wx.MAXIMIZE_BOX| wx.SYSTEM_MENU | wx.CAPTION |  wx.CLOSE_BOX)
+        ventana = wx.MiniFrame(None, -1, 'SISTEMA ALUMNOS.py', size=(900, 425),style= wx.MINIMIZE_BOX|wx.MAXIMIZE_BOX| wx.SYSTEM_MENU | wx.CAPTION |  wx.CLOSE_BOX)
 
-        Tabla_Alum(frame,-1)
+        Tabla_Alum(ventana,-1)
         
-        frame.Centre()
-        frame.Show()
+        ventana.Centre()
+        ventana.Show()
 
         # WxWindows entonces identificara esta como nuestra ventana principal
-        self.SetTopWindow(frame)
+        self.SetTopWindow(ventana)
 
         # regresa verdadero cuando esta bien
         return True
